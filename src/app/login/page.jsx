@@ -5,10 +5,13 @@ import Input from '@/components/Input'
 import { Formik } from 'formik'
 import * as Yup from 'yup';
 import React from 'react'
+import { useRouter } from 'next/router';
 
 export default function Login() {
 
+  
   const initialValues = {
+    
     name:"",
     email: "",
     password: "",
@@ -21,7 +24,7 @@ export default function Login() {
       password: Yup.string().required("O campo senha é obrigatorio"),
   });
 
-  async function handleSubmit() {
+  async function handleSubmit(values,{resetForm}) {
 
   }
 
